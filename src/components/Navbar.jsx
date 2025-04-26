@@ -1,6 +1,6 @@
 // components/Navbar.js
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -20,6 +20,8 @@ const menuItems = [
 ];
 
 const Navbar = ({ toggleDrawer }) => {
+  const location = useLocation(); // para conocer la ruta actual
+
   return (
     <AppBar position="static">
       <Toolbar>
@@ -37,7 +39,7 @@ const Navbar = ({ toggleDrawer }) => {
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Box 
             component="img"
-            src="/logo.png"
+            src="src/assets/logo.jpg"
             alt="Logo"
             sx={{ height: 40, width: 40, mr: 1, backgroundColor: 'white', p: 0.5, borderRadius: '50%' }}
           />
@@ -54,7 +56,8 @@ const Navbar = ({ toggleDrawer }) => {
               key={item.text}
               component={Link} 
               to={item.path} 
-              color="inherit"
+              color={location.pathname === item.path ? "activeOption" : "inherit"} 
+              variant={location.pathname === item.path ? "contained" : "text"}  // 👈 además cambia el estilo
               startIcon={item.icon}
               sx={{ mx: 0.5 }}
             >

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Clientes from "./pages/Clientes";
 import Proveedor from "./pages/Proveedor";
 import Usuarios from "./pages/Usuarios";
@@ -11,15 +11,18 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Navbar from "./components/Navbar"; // asegúrate que la ruta sea correcta
+import Navbar from "./components/Navbar"; 
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2',
+      main: 'rgb(124, 220, 210)',
     },  
     secondary: {
       main: '#dc004e',
+    },
+    activeOption: { 
+      main:'rgb(91, 201, 178)', // un naranjita, por ejemplo
     },
   },
 });
@@ -38,13 +41,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '90vh' }}>
          
         <Navbar toggleDrawer={toggleDrawer} />
-
           
-          
-          <Container component="main" sx={{ flexGrow: 1, py: 3 }}>
+          <Container component="main" sx={{ flexGrow: 1, py: 10}}>
             <Paper elevation={3} sx={{ p: 3 }}>
               <Routes>
                 <Route path="/clientes" element={<Clientes />} />
@@ -54,7 +55,7 @@ function App() {
                 <Route path="/" element={
                   <Box sx={{ textAlign: 'center', py: 4 }}>
                     <Typography variant="h5" color="text.primary" gutterBottom>
-                      Bienvenido a Mi Proyecto
+                      Bienvenido al panel de administración
                     </Typography>
                     <Typography variant="body1" color="text.secondary">
                       Selecciona una opción del menú para comenzar
