@@ -1,7 +1,6 @@
-# Panel Administrativo Web | Taller entornos de programación
+## Panel Administrativo Web | Taller entornos de programación
 
-Este es mi primer proyecto construido con **React.js**, usando **React Router** para la navegación y **Material UI** como framework para el estilo de la interfaz. 
----
+proyecto construido con **React.js**, usando **React Router** para la navegación y **Material UI** como framework para el estilo de la interfaz.
 
 ### Tecnologías Utilizadas
 
@@ -27,6 +26,7 @@ Creación del componente navbar y de las vistas de cliente, usuario y proveedor 
 
 
 ### Funcionalidades
+
 ✅ Navegación entre páginas sin recargar
 ✅ Diseño responsivo con Material UI
 ✅ Barra de navegación con íconos
