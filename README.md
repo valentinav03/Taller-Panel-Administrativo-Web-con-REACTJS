@@ -21,9 +21,10 @@ Sitio web construido con **React.js**, usando **React Router** para la navegaci�
 ![image](https://github.com/user-attachments/assets/9a23223c-3b9b-4763-a4e4-aa6389afdb3f)
 ![image](https://github.com/user-attachments/assets/703e6503-82a8-4075-b014-5a9758b29722)
 
+
 - Instalación componentes de **Material UI** utilizando el comando:
 
-     npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+     **npm install @mui/material @emotion/react @emotion/styled @mui/icons-material**
 
   Luego de esto, se añaden los *imports* según sean requeridos, a su vez se actualiza el   main.jsx:
   ![image](https://github.com/user-attachments/assets/2862b4fd-f39a-40c5-a3af-c2d0f6782f21)
@@ -34,6 +35,7 @@ Sitio web construido con **React.js**, usando **React Router** para la navegaci�
 
 ### Estructura básica del sitio
 Creación del componente navbar y de las vistas de cliente, usuario y proveedor en la carpeta de pages, las cuales son implementadas desde el componente App:
+
 ![image](https://github.com/user-attachments/assets/f355cc22-cc20-4b4f-9e29-f5b0e74300ab)
 
 
